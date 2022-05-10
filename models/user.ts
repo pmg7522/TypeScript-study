@@ -1,10 +1,11 @@
 import {
   DataTypes,
   Model,
+  Optional,
 } from 'sequelize';
 import { sequelize } from './index';
 
-interface UserAttributes {
+type UserAttributes = {
   id: number;
   email: string;
   password: string;
@@ -13,19 +14,17 @@ interface UserAttributes {
   gender: number;
 }
 
-export class User extends Model<UserAttributes>{
-  public readonly id!: number;
-  public email!: string;
-  public password!: string;
-  public nickname!: string;
-  public age!: number;
-  public gender!: number;
-  public readonly createdAt!: Date;
-  public readonly updatedAt!: Date;
+type UserCreationAttributes = Optional<UserAttributes, "id">;
 
-  public static associations: {
-    // 관계 설정
-  };
+class User extends Model<UserAttributes, UserCreationAttributes> {
+  declare id: number;
+  declare email: string;
+  declare password: string;
+  declare nickname: string;
+  declare age: number;
+  declare gender: number;
+  declare createdAt: Date;
+  declare updatedAt: Date;
 }
 
 User.init(
