@@ -1,0 +1,1 @@
+export { default as userSignUp } from "./user/signup"

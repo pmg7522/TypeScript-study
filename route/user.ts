@@ -1,7 +1,7 @@
 import express from "express";
 import {
   userSignUp
-} from "../controllers/user";
+} from "../controller";
 
 const router = express.Router();
 
