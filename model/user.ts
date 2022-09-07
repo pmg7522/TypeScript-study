@@ -3,6 +3,12 @@ interface UserSignUp {
   password: string;
 };
 
+interface loginData {
+  username: string;
+  password: string;
+}
+
 export {
   UserSignUp,
+  loginData,
 }
