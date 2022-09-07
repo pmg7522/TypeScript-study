@@ -12,7 +12,7 @@ export const signUp = async function (userInfo: UserSignUp) {
   return;
 }
 
-export const logIn = async function (loginData: loginData) {
+export const login = async function (loginData: loginData) {
   const { username, password } = loginData;
 
   const sql: string = "SELECT username, password FROM User WHERE username = ? AND password = ?";

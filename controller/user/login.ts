@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from "express";
-import { logIn } from "../../data/user";
+import { login } from "../../data/user";
 
-export const userSignIn = async (req: Request, res: Response, next: NextFunction) => {
+export const userLogin = async (req: Request, res: Response, next: NextFunction) => {
   const { username, password }: { username: string, password: string } = req.body;
 
-  const logInData = { username, password };
+  const loginData = { username, password };
 
-  logIn(logInData)
+  login(loginData)
     .then(() => {
       return res.status(200).send({
         message: "로그에 성공하였습니다."
