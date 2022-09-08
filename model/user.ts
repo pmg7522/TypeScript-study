@@ -1,11 +1,22 @@
 interface UserSignUp {
-  username: string;
-  password: string;
+  username: String;
+  password: String;
 };
 
 interface loginData {
-  username: string;
-  password: string;
+  username: String;
+  password: String;
+}
+
+interface userInfo {
+  username: String;
+  password: String;
+  createdAt: Date;
+  status: Number;
+}
+
+interface userList {
+
 }
 
 export {
