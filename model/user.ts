@@ -3,23 +3,22 @@ interface UserSignUp {
   password: string;
 };
 
-interface loginData {
+interface LoginData {
   username: string;
   password: string;
-}
+};
 
-interface userInfo {
+interface UserInfo {
   username: string;
-  password: string;
   createdAt: Date;
   status: number
-}
+};
 
-interface userList {
-
-}
+interface UserList extends Array<UserInfo> { };
 
 export {
   UserSignUp,
-  loginData,
+  LoginData,
+  UserInfo,
+  UserList
 }
